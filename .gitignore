@@ -1,1 +1,107 @@
+# ==========================================
+# .gitignore for CivilAI Twin
+# Copy this content to GitHub .gitignore file
+# ==========================================
 
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+.Python
+
+# Virtual Environment (IMPORTANT - Don't upload!)
+venv/
+.venv/
+env/
+ENV/
+virtualenv/
+
+# PyInstaller Build Files (Don't upload EXE)
+build/
+dist/
+*.spec
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Logs & Debug Files
+*.log
+logs/
+*.log.*
+debug.log
+error.log
+civilai_twin.log
+
+# Configuration & Secrets (IMPORTANT!)
+.env
+.env.local
+.env.production
+*.key
+*.pem
+config/user_config.yaml
+config/api_keys.encrypted
+
+# Test Coverage
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Data Files (User Projects)
+data/user_projects/
+data/uploads/
+temp/
+*.tmp
+*.bak
+
+# OS Specific
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+
+# Build Artifacts
+*.exe
+*.msi
+*.zip
+*.tar.gz
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation Builds
+docs/_build/
+site/
+_build/
+
+# Package Manager
+pip-log.txt
+pip-delete-this-directory.txt
+
+# MyPy Type Checker
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre Type Checker
+.pyre/
+
+# Project Specific
+reports/*.pdf
+output/
+*.db
+*.sqlite
+*.sqlite3
