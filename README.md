@@ -95,7 +95,7 @@
 
 ### **Option 1: Download Executable (Easiest)**
 
-1. Download the latest release: [CivilAI-Twin.exe](https://github.com/YourUsername/CivilAI-Twin/releases)
+1. Download the latest release: [CivilAI-Twin.exe](https://github.com/fahadkhan-91/CivilAI-Twin/releases)
 2. Extract the ZIP file
 3. Run `CivilAI-Twin.exe`
 4. No installation required!
@@ -111,7 +111,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YourUsername/CivilAI-Twin.git
+git clone https://github.com/fahadkhan-91/CivilAI-Twin.git
 cd CivilAI-Twin
 
 # 2. Create virtual environment
