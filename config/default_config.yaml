@@ -1,0 +1,139 @@
+# CivilAI Twin - Default Configuration File
+
+application:
+  name: CivilAI Twin
+  version: 1.0.0
+  theme: light  # light or dark
+  language: en  # en, es, fr, zh
+
+ai:
+  mode: built-in  # built-in (no API) or api (API-enhanced)
+  provider: openai  # openai or anthropic
+  model: gpt-4  # gpt-4, gpt-4-turbo, gpt-3.5-turbo, claude-3-sonnet
+  temperature: 0.7
+  max_tokens: 2000
+
+analysis:
+  structural:
+    safety_factor: 1.5
+    code_standard: ACI  # ACI, Eurocode, IS Code, BS Code
+    load_combinations:
+      - dead_live: 1.2D + 1.6L
+      - dead_wind: 1.2D + 1.0W + 1.0L
+      - dead_seismic: 1.2D + 1.0E + 1.0L
+    deflection_limits:
+      live_load: 360  # L/360
+      total_load: 240  # L/240
+  
+  geotechnical:
+    soil_classification: USCS  # USCS or AASHTO
+    settlement_limit_mm: 25
+    bearing_capacity_fos: 3.0
+    sliding_fos: 1.5
+    overturning_fos: 2.0
+    methods:
+      bearing_capacity: Terzaghi
+      settlement: Schmertmann
+  
+  materials:
+    concrete_grade: M25  # M20, M25, M30, M35, M40
+    steel_grade: Fe500   # Fe415, Fe500, Fe550
+    cement_type: OPC     # OPC, PPC, PSC
+    cover_mm: 25
+    max_aggregate_size: 20
+  
+  climate:
+    return_period_years: 50
+    climate_zone: temperate
+    wind_speed_basic: 33  # m/s
+    seismic_zone: 3
+    rainfall_idf_source: local_met_station
+  
+  computer_vision:
+    confidence_threshold: 0.7
+    crack_min_width_mm: 0.3
+    detection_model: resnet50
+    image_preprocessing: true
+
+visualization:
+  render_quality: high  # low, medium, high, ultra
+  show_grid: true
+  show_axes: true
+  background_color: '#f0f0f0'
+  mesh_color: '#3498db'
+  lighting: three_point
+  camera_position: isometric
+  export_formats:
+    - png
+    - jpg
+    - pdf
+
+reporting:
+  include_calculations: true
+  include_graphs: true
+  include_3d_views: true
+  include_photos: true
+  paper_size: letter  # letter or A4
+  orientation: portrait  # portrait or landscape
+  logo_path: ''
+  watermark: ''
+  page_numbers: true
+  date_format: '%B %d, %Y'
+  
+  sections:
+    - cover_page
+    - table_of_contents
+    - executive_summary
+    - methodology
+    - results
+    - recommendations
+    - appendices
+
+cost_estimation:
+  currency: USD
+  unit_system: metric  # metric or imperial
+  labor_rate_per_hour: 25.0
+  overhead_percentage: 15.0
+  profit_margin_percentage: 10.0
+  contingency_percentage: 10.0
+  escalation_rate_annual: 3.0
+
+carbon:
+  calculation_method: ICE  # ICE (Inventory of Carbon & Energy) or custom
+  boundaries:
+    - material_production
+    - transportation
+    - construction
+    - end_of_life
+  report_units: kgCO2e
+  benchmarking: true
+  reduction_targets:
+    aggressive: 40
+    moderate: 20
+    baseline: 0
+
+data:
+  auto_save: true
+  auto_save_interval_minutes: 10
+  backup_enabled: true
+  max_backup_count: 5
+  project_format: civilai
+  export_formats:
+    - json
+    - xml
+    - csv
+    - excel
+
+performance:
+  max_threads: 4
+  cache_enabled: true
+  cache_size_mb: 500
+  gpu_acceleration: auto
+  memory_limit_mb: 4096
+
+advanced:
+  debug_mode: false
+  log_level: INFO  # DEBUG, INFO, WARNING, ERROR
+  enable_telemetry: false
+  check_updates: true
+  developer_mode: false
