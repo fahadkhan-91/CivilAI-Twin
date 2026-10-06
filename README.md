@@ -9,6 +9,8 @@
 
 **CivilAI Twin** is a comprehensive desktop application that empowers civil engineers with AI-assisted analysis, calculations, and professional report generation. Built with Python and PyQt6, it provides real-time structural, geotechnical, carbon footprint, and cost analysis capabilities.
 
+> ⚠️ **Disclaimer:** This tool is intended for preliminary analysis and educational use only. All designs must be reviewed and approved by a licensed professional engineer before construction.
+
 ---
 
 ## 📸 Screenshots
@@ -62,7 +64,7 @@
 - ✅ Market rate integration
 - ✅ Project budgeting tools
 
-#### **5. Climate Risk Analysis**
+#### **5. Climate Risk Analysis** *(simplified models)*
 - ✅ Flood risk assessment
 - ✅ Rainfall intensity modeling
 - ✅ Temperature range analysis
@@ -219,15 +221,14 @@ APP_THEME=system             # light, dark, system
 
 # Analysis Defaults
 UNITS_SYSTEM=metric          # metric, imperial
-CODE_STANDARD=IS             # IS, ACI, BS, EURO
+CODE_STANDARD=IS             # Currently IS only; ACI, BS, EURO planned
 ```
 
 ### **Code Standards**
-The application supports multiple design codes:
-- **IS Codes** (Indian Standard) - Default
-- **ACI** (American Concrete Institute)
-- **BS** (British Standards)
-- **Eurocode**
+- **IS Codes** (Indian Standard): **supported (default)**
+- **ACI** (American Concrete Institute): planned
+- **BS** (British Standards): planned
+- **Eurocode**: planned
 
 ---
 
@@ -288,6 +289,8 @@ pyinstaller CivilAI-Twin.spec --clean --noconfirm
 
 ## 📊 Analysis Examples
 
+> Values below are illustrative examples of the output format.
+
 ### **Example 1: Beam Analysis**
 
 **Input:**
@@ -327,6 +330,8 @@ Applied Load: 500 kN
 📊 Settlement: 18.5mm (within limits)
 ```
 
+> Note: in this illustrative example the applied pressure exceeds the allowable capacity; replace with real output from the app before publishing.
+
 ### **Example 3: Carbon Footprint**
 
 **Input:**
@@ -342,8 +347,6 @@ Bricks: 10 tonnes
 ```
 📊 Total Carbon: 32,000 kg CO₂e
 📊 Per m²: 64 kg CO₂e/m²
-✅ Performance: EXCEPTIONAL
-📊 vs Industry Average: -89% (600 kg CO₂e/m²)
 ```
 
 ---
@@ -397,7 +400,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ```
 MIT License
 
-Copyright (c) 2024 CivilAI Team
+Copyright (c) 2026 Muhammad Fahad Khan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -408,20 +411,15 @@ in the Software without restriction...
 
 ## 🔗 Links & Resources
 
-### **Documentation**
-- 📚 [Complete Documentation](COMPLETE_APP_DOCUMENTATION.md) *(optional)*
-- 🔨 [Build Guide](HOW_TO_BUILD.md) *(optional)*
-- 📋 [Release Notes](RELEASE_NOTES.md) *(optional)*
-
 ### **Standards & Codes**
 - [IS 456:2000](https://www.iitk.ac.in/nicee/codes/IS%20456_2000.pdf) - Plain and Reinforced Concrete
 - [IS 1893](https://law.resource.org/pub/in/bis/S03/is.1893.1.2002.pdf) - Earthquake Resistant Design
 - [ICE Database](https://circularecology.com/embodied-carbon-footprint-database.html) - Carbon Coefficients
 
 ### **Community**
-- 🐛 [Report Issues](https://github.com/YourUsername/CivilAI-Twin/issues)
-- 💬 [Discussions](https://github.com/YourUsername/CivilAI-Twin/discussions)
-- 📧 Email: your.email@example.com
+- 🐛 [Report Issues](https://github.com/fahadkhan-91/CivilAI-Twin/issues)
+- 💬 [Discussions](https://github.com/fahadkhan-91/CivilAI-Twin/discussions)
+- 📧 Email: engr.fahadkhan.pk@gmail.com
 
 ---
 
@@ -452,11 +450,6 @@ This tool is designed for:
 - Industry demand for efficient design tools
 - Open-source collaboration
 
-### **Special Thanks**
-- Civil engineering community for feedback
-- Open-source contributors
-- Beta testers and early users
-
 ---
 
 ## 📈 Roadmap
@@ -475,6 +468,7 @@ This tool is designed for:
 - 🔄 Multi-language support
 
 ### **Version 2.0** 📅 (Planned)
+- 📅 Additional design codes (ACI, BS, Eurocode)
 - 📅 Cloud collaboration features
 - 📅 Mobile app companion
 - 📅 Advanced AI design suggestions
@@ -517,7 +511,7 @@ A: Currently Windows-optimized. Linux/Mac support planned.
 - Some matplotlib charts may not render on high-DPI displays
 - Climate risk module uses simplified models (detailed analysis coming)
 
-See [Issues](https://github.com/YourUsername/CivilAI-Twin/issues) for complete list.
+See [Issues](https://github.com/fahadkhan-91/CivilAI-Twin/issues) for complete list.
 
 ---
 
@@ -527,7 +521,7 @@ See [Issues](https://github.com/YourUsername/CivilAI-Twin/issues) for complete l
 - 📖 Read the documentation
 - 🔍 Search existing issues
 - 💬 Start a discussion
-- 📧 Email support
+- 📧 Email: engr.fahadkhan.pk@gmail.com
 
 ### **Reporting Bugs**
 1. Check if issue already exists
@@ -540,11 +534,11 @@ See [Issues](https://github.com/YourUsername/CivilAI-Twin/issues) for complete l
 
 ## 📊 Statistics
 
-![GitHub Stars](https://img.shields.io/github/stars/YourUsername/CivilAI-Twin?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/YourUsername/CivilAI-Twin?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/YourUsername/CivilAI-Twin)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/YourUsername/CivilAI-Twin)
-![Last Commit](https://img.shields.io/github/last-commit/YourUsername/CivilAI-Twin)
+![GitHub Stars](https://img.shields.io/github/stars/fahadkhan-91/CivilAI-Twin?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/fahadkhan-91/CivilAI-Twin?style=social)
+![GitHub Issues](https://img.shields.io/github/issues/fahadkhan-91/CivilAI-Twin)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/fahadkhan-91/CivilAI-Twin)
+![Last Commit](https://img.shields.io/github/last-commit/fahadkhan-91/CivilAI-Twin)
 
 ---
 
@@ -552,26 +546,24 @@ See [Issues](https://github.com/YourUsername/CivilAI-Twin/issues) for complete l
 
 If you find this project helpful, please consider giving it a star! ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=YourUsername/CivilAI-Twin&type=Date)](https://star-history.com/#YourUsername/CivilAI-Twin&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=fahadkhan-91/CivilAI-Twin&type=Date)](https://star-history.com/#fahadkhan-91/CivilAI-Twin&Date)
 
 ---
 
 ## 📅 Version History
 
-### **v1.0.0** - August 2024
+### **v1.0.0** - 2026
 - 🎉 Initial release
 - ✅ Core analysis modules
 - ✅ PDF report generation
 - ✅ PyQt6 GUI
 - ✅ Windows executable
 
-See [RELEASE_NOTES.md](RELEASE_NOTES.md) for detailed changelog.
-
 ---
 
 <div align="center">
 
-**Made with ❤️ by Civil Engineers, for Civil Engineers**
+**Made with ❤️ for civil engineers**
 
 [⬆ Back to Top](#-civilai-twin)
 
@@ -579,4 +571,4 @@ See [RELEASE_NOTES.md](RELEASE_NOTES.md) for detailed changelog.
 
 ---
 
-© 2024 CivilAI Twin. All Rights Reserved.
+© 2026 Muhammad Fahad Khan. Released under the MIT License.
